@@ -1,0 +1,131 @@
+{
+  "STYLE": {
+    "UNICODE": {
+      "BOXES": [
+        "■",
+        "□",
+        "▣",
+        "▤",
+        "▥",
+        "▦",
+        "▧",
+        "▨",
+        "▩"
+      ],
+      "PLAYER": "λ",
+      "EDGE": "+",
+      "Y_BORDER": "—",
+      "X_BORDER": "|",
+      "AIR": " ",
+      "PLAYER_DEAD": "X",
+      "FLOOR": "▄",
+      "FLOOR_PATTERN": [
+        "▒"
+      ],
+      "UNDERGROUND_FLOOR_PATTERN": [
+        "░"
+      ]
+    },
+    "MESSAGES": {
+      "ASCII_LAMBDA": [
+        "    █▄      ",
+        "    ▀█▄     ",
+        "      ▀█▄    ",
+        "    ▄██▀█▄   ",
+        "   ▄█▀  ▀█▄  ",
+        "  ▄█▀    ▀█▄ ",
+        " ▄█▀      ▀█▄"
+      ],
+      "GAME_START": "ENTER THE LAMBDA",
+      "GAME_START_SUBSCRIPT": "Tap (space) to start!",
+      "GAME_RESTART_SUBSCRIPT": "Tap (space) to restart!",
+      "TERMINAL_HISTORY": [
+        "Welcome to Lambda OS v0.7.23",
+        "Type 'lambda' to start the system...",
+        ""
+      ],
+      "GAME_OVER": [
+         "  _____   ___  ___  ___ _____   _____  _   _ ___________ " ,
+        "|  __ \\ / _ \\ |  \\/  ||  ___| |  _  || | | |  ___| ___ \\" ,
+        "| |  \\// /_\\ \\| .  . || |__   | | | || | | | |__ | |_/ /" ,
+        "| | __ |  _  || |\\/| ||  __|  | | | || | | |  __||    / " ,
+        "| |_\\ \\| | | || |  | || |___  \\ \\_/ /\\ \\_/ / |___| |\\ \\ " ,
+        " \\____/\\_| |_/\\_|  |_/\\____/   \\___/  \\___/\\____/\\_| \\_|"
+      ],
+      "SCORE_SUMMARY": " FINAL SCORE: "
+    },
+    "BOOTUP_SEQUENCE": {
+      "LINES": [
+        "BIOS DATE 10/26/85 01:21 AM VER 1.21",
+        "CPU: PDP-11, SPEED: 23 MHz",
+        "7K RAM SYSTEM",
+        "RAM TEST ........... OK",
+        "KEYBOARD ........... DETECTED",
+        "MOUSE .............. NOT DETECTED",
+        "LOADING OS ...",
+        "MINIX Intel ME Version loaded.",
+        "MOUNTING DRIVE ZFS: ...",
+        "EXECUTING BOOT SECTOR",
+        "INITIALISING LAMBDA CORE ...",
+        "MITIGATED Y2K-BUG THROUGH TIME TRAVEL ...",
+        "READY.",
+        ""
+      ]
+    },
+    "BACKGROUND": {
+      "PARALLAX_FACTOR": 0.33,
+      "STAR_DENSITY_UPPER_TRESHOLD": 0.05,
+      "STARS": {
+        "SMALL": {
+          "char": "·",
+          "probability": 0.3
+        },
+        "MEDIUM": {
+          "char": "✦",
+          "probability": 0.2
+        },
+        "LARGE": {
+          "char": "✧",
+          "probability": 0.1
+        }
+      }
+    }
+  },
+  "SETTINGS": {
+    "OBJECTS": {
+      "OBJECT_SPAWN_PROBABILITY": 0.1,
+      "MINIMUM_OBJECT_DISTANCE": 12,
+      "OBJECT_TO_HOLE_SAFETY_DISTANCE": 4
+    },
+    "FLOOR": {
+      "MIN_RUN_LENGTH": 4,
+      "STEP_DOWN_PROBABILITY": 0.1,
+      "STEP_UP_PROBABILITY": 0.1,
+      "START_FRACTION": 0.3333333,
+      "UPPER_THIRD_FRACTION": 0.6666667,
+      "BOTTOM_MARGIN": 1,
+      "TOP_MARGIN": 10,
+      "SURFACE_OFFSET": 1,
+      "HEIGHT_ABOVE_GAME_BORDER": 1
+    },
+    "HOLES": {
+      "ALLOW_HOLES": true,
+      "HOLE_PROBABILITY": 0.02,
+      "MIN_HOLE_LENGTH": 2,
+      "MAX_HOLE_LENGTH": 3
+    },
+    "PHYSICS": {
+      "GRAVITY": 1,
+      "INITIAL_JUMP_FORCE": 2,
+      "SUSTAINED_JUMP_FORCE": 1,
+      "JUMP_TICKS_EXCEEDED_VALUE": 100,
+      "SUSTAINABLE_JUMP_TICKS_LIMIT": 5
+    }
+  },
+  "FPS": 18,
+  "STORAGE_KEY": "lambda_game_highscore",
+  "DIMENSIONS": {
+    "WIDTH": 60,
+    "HEIGHT": 25
+  }
+}

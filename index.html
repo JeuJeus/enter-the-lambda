@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter the Lambda</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./res/css/game-styles.css"/>
+</head>
+<body>
+<div id="matrix-background"></div>
+
+<div class="crt-monitor">
+    <div class="tape-label">
+        FUCK UP
+        <span class="tape-popover">Hagbard Celines "First Universal Cybernetic-<br>Kinetic-Ultramicro-Programmer"</span>
+    </div>
+    <div class="crt-screen">
+        <div id="game-container" class="scan-lines">
+            <pre id="terminal"></pre>
+        </div>
+    </div>
+    <a href="https://github.com/jeujeus/enter-the-lambda" target="_blank" class="brand-logo">JEUJEUS</a>
+    <div class="monitor-controls">
+        <button id="mute-button" class="monitor-button" title="Toggle Sound">
+            <span class="sound-icon">♪</span>
+            <div class="mute-led"></div>
+        </button>
+        <button id="power-button" class="monitor-button" title="Reset Game">
+            <span class="power-icon">⏻</span>
+            <div class="power-led"></div>
+        </button>
+    </div>
+    <div class="sticker-qc">
+        <span class="qc-title">QC PASSED</span>
+        <span class="qc-id">CHECKED</span>
+    </div>
+    <div class="sticker-asset">
+        <span class="asset-prop">PROPERTY OF</span>
+        <span class="asset-owner">LAMBDA LABS</span>
+        <div class="asset-barcode"></div>
+        <span class="asset-id">ID: 237-L</span>
+    </div>
+    <div class="sticker-y2k">
+        <span class="y2k-icon">⚠</span>
+        <span class="y2k-text">Y2K COMPLIANT</span>
+        <span class="y2k-sub">DO NOT TURN OFF</span>
+    </div>
+</div>
+
+<script type="module" src="res/js/game.js"></script>
+<script type="module" src="res/js/surroundingStyle/monitorControls.js"></script>
+</body>
+</html>

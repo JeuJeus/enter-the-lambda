@@ -1,0 +1,1 @@
+export const isForegroundObjectPresent = (foregroundCharacter, airCharacter) => foregroundCharacter === airCharacter;

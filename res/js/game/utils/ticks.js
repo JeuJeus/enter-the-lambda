@@ -1,0 +1,2 @@
+export const MILLISECONDS_IN_SECOND = 1000;
+export const HALF_SECOND_IN_MILLISECONDS = 500;
