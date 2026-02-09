@@ -1,6 +1,7 @@
 # λ Enter the Lambda 
 
 "_Enter the Lambda_", is a **fully text-based**, **single button controlled** video game.  
+It is built completly using vanilla JS, HTML and CSS, without any engine, libraries or frameworks.  
 It aims to provide a classic arcade experience through its visuals.
 
 ![Enter the Lambda Screenshot](./doc/gameplay.gif)
@@ -19,7 +20,7 @@ It aims to provide a classic arcade experience through its visuals.
 ## Constraints
 - Fully text-based, using only Unicode characters, HTML, CSS for visuals.
 - Built using only vanilla JavaScript, HTML, and CSS
-  - No libraries or frameworks
+  - No engine, libraries or frameworks
 - Controls are limited to a single key: _spacebar_
 - Colors are limited to black and green (shades allowed)
 
