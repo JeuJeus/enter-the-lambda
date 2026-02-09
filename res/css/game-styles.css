@@ -723,3 +723,186 @@ pre {
         transform: translateY(150vh);
     }
 }
+
+.mobile-warning-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.mobile-warning-popup {
+    background: var(--background-color);
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1.5rem;
+    max-width: 90%;
+    width: 400px;
+    position: relative;
+    filter: var(--crt-like-blur-factor);
+    box-shadow:
+        0 0 20px var(--monitor-drop-shadow-color),
+        0 0 40px var(--text-shadow-color);
+    animation:
+        popup-entrance 0.3s ease-out,
+        crt-flicker 0.15s infinite;
+    transform-origin: center;
+}
+
+.mobile-warning-popup::before,
+.mobile-warning-popup::after {
+    display: block;
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+}
+
+.mobile-warning-popup::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 1000;
+    background: var(--scan-line-color);
+    opacity: 0.75;
+    animation: scanline 6s linear infinite;
+}
+
+.mobile-warning-popup::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        var(--scan-line-color) 51%
+    );
+    background-size: 100% 4px;
+    animation: scan-lines 1s steps(60) infinite;
+}
+
+@keyframes popup-entrance {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.mobile-warning-header {
+    display: flex;
+    align-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--text-color-dim);
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-warning-icon {
+    font-size: 2rem;
+    color: var(--text-color);
+    animation: pulse-warning 2s ease-in-out infinite;
+    position: relative;
+    z-index: 1001;
+}
+
+@keyframes pulse-warning {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px var(--text-color);
+    }
+    50% {
+        opacity: 0.6;
+        text-shadow: 0 0 5px var(--text-color);
+    }
+}
+
+.mobile-warning-header h2 {
+    margin: 0;
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    text-shadow:
+        2px 0 1px var(--chromatic-aberration-red),
+        -2px 0 1px var(--chromatic-aberration-blue),
+        0 0 10px var(--text-color-bright);
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-warning-content p {
+    color: var(--text-color-bright);
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    text-shadow:
+        1px 0 1px var(--chromatic-aberration-red),
+        -1px 0 1px var(--chromatic-aberration-blue),
+        0 0 8px var(--text-color-bright);
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-warning-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-warning-button {
+    padding: 0.75rem 1.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-warning-button-primary {
+    background-color: var(--text-color);
+    color: #000;
+    font-weight: bold;
+}
+
+.mobile-warning-button-primary:hover {
+    background-color: var(--text-color-bright);
+    box-shadow: 0 0 15px var(--text-shadow-color);
+    transform: translateY(-2px);
+}
+
+.mobile-warning-button-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.mobile-warning-button-secondary:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 10px var(--text-shadow-color);
+}
+
