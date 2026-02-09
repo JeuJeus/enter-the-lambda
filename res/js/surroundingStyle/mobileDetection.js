@@ -7,49 +7,9 @@ const isMobileDevice = () => {
     return mobileRegex.test(userAgent.toLowerCase()) || (hasTouchScreen && isSmallScreen);
 };
 
-const createMobileWarningPopup = () => {
-    const overlay = document.createElement('div');
-    overlay.id = 'mobile-warning-overlay';
-    overlay.className = 'mobile-warning-overlay';
-
-    const popup = document.createElement('div');
-    popup.className = 'mobile-warning-popup';
-
-    popup.innerHTML = `
-        <div class="mobile-warning-header">
-            <span class="mobile-warning-icon">λ</span>
-            <h2>DESKTOP ONLY</h2>
-        </div>
-        <div class="mobile-warning-content">
-            <p>This game is currently only available on desktop devices.</p>
-            <p>Please visit this website on a desktop computer for the full experience.</p>
-            <div class="mobile-warning-actions">
-                <a href="https://github.com/jeujeus/enter-the-lambda" 
-                   target="_blank" 
-                   class="mobile-warning-button mobile-warning-button-primary">
-                    Visit Repository
-                </a>
-            </div>
-        </div>
-    `;
-
-    overlay.appendChild(popup);
-    return overlay;
-};
-
-const hideCrtMonitor = () => {
-    const crtMonitor = document.querySelector('.crt-monitor');
-    if (crtMonitor) {
-        crtMonitor.style.display = 'none';
-    }
-};
-
 const initializeMobileDetection = () => {
-    if (isMobileDevice()) {
-        hideCrtMonitor();
-        const warningPopup = createMobileWarningPopup();
-        document.body.appendChild(warningPopup);
-    }
+    if (!isMobileDevice()) return;
+    document.body.classList.add('is-mobile');
 };
 
 if (document.readyState === 'loading') {

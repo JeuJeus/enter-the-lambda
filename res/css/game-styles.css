@@ -731,10 +731,18 @@ pre {
     width: 100vw;
     height: 100vh;
     background-color: transparent;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 10000;
+}
+
+body.is-mobile .mobile-warning-overlay {
+    display: flex;
+}
+
+body.is-mobile .crt-monitor {
+    display: none;
 }
 
 .mobile-warning-popup {
