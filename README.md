@@ -1,8 +1,11 @@
 # λ Enter the Lambda 
 
 "_Enter the Lambda_", is a **fully text-based**, **single button controlled** video game.  
-It is built completly using vanilla JS, HTML and CSS, without any engine, libraries or frameworks.  
-It aims to provide a classic arcade experience through its visuals.
+It is built completly using vanilla JS, HTML and CSS, **without any engine, library or framework**.  
+The style is kept really simple with **only two colors**.  
+
+The game aims to resemble an oldschool early 80s gaming experience through its visuals.  
+The surrounding style of the animated background and the CRT monitor as well as Terminal round off the experience together.
 
 ![Enter the Lambda Screenshot](./doc/gameplay.gif)
 
@@ -10,11 +13,11 @@ It aims to provide a classic arcade experience through its visuals.
 
 ## Screenshots
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-    <img src="./doc/screenshots/boot.png" alt="Enter the Lambda Screenshot" width="49%" style="margin-bottom: 10px;">
-    <img src="./doc/screenshots/terminal.png" alt="Enter the Lambda Screenshot" width="49%" style="margin-bottom: 10px;">
-    <img src="./doc/screenshots/start-screen.png" alt="Enter the Lambda Screenshot" width="49%" style="margin-bottom: 10px;">
-    <img src="./doc/screenshots/gameplay.png" alt="Enter the Lambda Screenshot" width="49%" style="margin-bottom: 10px;">
-    <img src="./doc/screenshots/game-over-screen.png" alt="Enter the Lambda Screenshot" width="49%" style="margin-bottom: 10px;">
+    <img src="./doc/screenshots/boot.png" alt="Enter the Lambda Screenshot" width="33%" style="margin-bottom: 10px;">
+    <img src="./doc/screenshots/terminal.png" alt="Enter the Lambda Screenshot" width="33%" style="margin-bottom: 10px;">
+    <img src="./doc/screenshots/start-screen.png" alt="Enter the Lambda Screenshot" width="33%" style="margin-bottom: 10px;">
+    <img src="./doc/screenshots/gameplay.png" alt="Enter the Lambda Screenshot" width="33%" style="margin-bottom: 10px;">
+    <img src="./doc/screenshots/game-over-screen.png" alt="Enter the Lambda Screenshot" width="33%" style="margin-bottom: 10px;">
 </div>
 
 ## Constraints
@@ -25,7 +28,7 @@ It aims to provide a classic arcade experience through its visuals.
 - Colors are limited to black and green (shades allowed)
 
 ## Style
-- Retro style, reminiscent of early arcade games.
+- Retro style, reminiscent of early arcade, pc games.
 - Monospaced font to enhance the retro aesthetic.
 - Essentially only two colors: _black_ and _green_
 - Additional atmospheric elements are included:
